@@ -11,6 +11,11 @@ public class StringCalculatorTests {
 	StringCalculator stringCalculator = new StringCalculator();
 	
 	@Test
+	public void emptyString() {
+		int result = stringCalculator.add("");
+		assertEquals(result, 0);
+	}
+	@Test
 	public void commaDelimiter() {
 		int result = stringCalculator.add("1,2,3");
 		assertEquals(result, 6);
